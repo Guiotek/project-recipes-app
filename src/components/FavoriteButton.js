@@ -90,6 +90,7 @@ function FavoriteButton() {
       data-testid="favorite-btn"
       type="button"
       onClick={ handleClick }
+      className="search-header"
       src={ buttonClick ? blackHeartIcon : whiteHeartIcon }
       alt={ buttonClick ? 'blackHeartIcon' : 'whiteHeartIcon' }
     >

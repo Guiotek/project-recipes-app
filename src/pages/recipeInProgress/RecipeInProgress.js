@@ -76,24 +76,26 @@ export default function RecipeInProgress(props) {
       {/* { !loading && console.log(recipe.inProgressRecipes.meals[id])} */}
       {
         !loading && (
-          <div className="in-progess-container">
-            <p>{inProgress[0].idMeal || inProgress[0].idDrink }</p>
+          <div className="in-progess-container div-recipes">
             <img
               data-testid="recipe-photo"
+              className="img-card img-inProgress"
               src={ inProgress[0].strMealThumb || inProgress[0].strDrinkThumb }
               alt={ inProgress[0].strMeal || inProgress[0].strDrink }
             />
-            <h3 data-testid="recipe-title">
+            <h3 data-testid="recipe-title" className="mgBotton">
               { inProgress[0].strMeal || inProgress[0].strDrink }
             </h3>
             <button
               type="button"
+              className="btn-filter"
               data-testid="share-btn"
             >
               Compartilhar
             </button>
             <button
               type="button"
+              className="mgBotton btn-filter"
               data-testid="favorite-btn"
             >
               Favoritar
@@ -118,6 +120,7 @@ export default function RecipeInProgress(props) {
                             // checked={ isChecked[index] }
                             // onChange={ () => handleCheck(element) }
                           />
+                          {' '}
                           {element}
                         </label>
                       </div>
@@ -126,9 +129,12 @@ export default function RecipeInProgress(props) {
                 })
               }
             </div>
-            <p data-testid="instructions">{inProgress[0].strInstructions }</p>
+            <div className="div-intructions">
+              <p data-testid="instructions">{inProgress[0].strInstructions }</p>
+            </div>
             <button
               type="button"
+              className="btn-filter"
               data-testid="finish-recipe-btn"
             >
               Finalizar receita

@@ -28,18 +28,23 @@ function Login() {
   };
 
   return (
-    <div className="login-container">
+    <div className="login-container vh-100">
       <h1>Login</h1>
-      <form>
+      <form className="d-flex aline-items-center form-login">
         <fieldset>
-          <legend>
+          <legend className="d-flex justify-content-center">
             Digite e-mail e senha
           </legend>
-          <label htmlFor="email">
+          <label htmlFor="email" className="label-login">
             E-mail:
+            {' '}
+            {' '}
+            {' '}
             <input
               type="email"
               name="email"
+              placeholder="Email"
+              className="rounded input-login"
               data-testid="email-input"
               value={ email }
               onChange={ (({ target }) => setEmail(target.value)) }
@@ -47,9 +52,14 @@ function Login() {
           </label>
           <label htmlFor="password">
             Senha:
+            {' '}
+            {' '}
+            {' '}
             <input
               type="password"
               name="password"
+              placeholder="Password"
+              className="rounded input-login"
               data-testid="password-input"
               value={ password }
               onChange={ (({ target }) => setPassword(target.value)) }
@@ -58,6 +68,7 @@ function Login() {
           <button
             type="button"
             data-testid="login-submit-btn"
+            className="btn-login"
             disabled={ btnDisable }
             onClick={ handleClick }
           >

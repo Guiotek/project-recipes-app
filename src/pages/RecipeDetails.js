@@ -102,11 +102,12 @@ export default function RecipeDetails(props) {
     <div>
       {/* { !loading && console.log(mealOrDrink) } */ }
       { !loading && (
-        <div>
+        <div className="div-recipes">
           <img
             src={ recipeDetail[0].strMealThumb || recipeDetail[0].strDrinkThumb }
             alt={ recipeDetail[0].strMeal || recipeDetail[0].strDrink }
             data-testid="recipe-photo"
+            className="img-card"
           />
           <h1
             data-testid="recipe-title"
@@ -143,11 +144,14 @@ export default function RecipeDetails(props) {
                 <YoutubeEmbed url={ recipeDetail[0].strYoutube } />
               </div>
             ) }
-          <Recommendations typeAPI={ drinkAPI || mealAPI } />
-          <ButtonShare />
-          <FavoriteButton />
-          {
-            recipeStatus !== 'done'
+          <div>
+            <Recommendations typeAPI={ drinkAPI || mealAPI } />
+          </div>
+          <div className="div-buttons">
+            <ButtonShare />
+            <FavoriteButton />
+            {
+              recipeStatus !== 'done'
             && (
               <button
                 data-testid="start-recipe-btn"
@@ -158,7 +162,8 @@ export default function RecipeDetails(props) {
                 { recipeStatus === 'new' ? 'Start Recipe' : 'Continue Recipe' }
               </button>
             )
-          }
+            }
+          </div>
         </div>
       ) }
     </div>

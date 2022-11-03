@@ -1,4 +1,5 @@
 import React, { useContext, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Recipes from '../components/Recipes';
@@ -27,14 +28,20 @@ export default function Comidas() {
       }
       {
         results && results.slice(0, NUMBER_12).map((element, index) => (
-          <div key={ index } data-testid={ `${index}-recipe-card` }>
-            <img
-              src={ element.strMealThumb }
-              alt={ element.strMeal }
-              data-testid={ `${index}-card-img` }
-            />
-            <p data-testid={ `${index}-card-name` }>{element.strMeal}</p>
-          </div>
+          <Link to={ `/meals/${results[0].idMeal}` } key={ index } className="link">
+            <div
+              className="div-recipes"
+              data-testid={ `${index}-recipe-card` }
+            >
+              <img
+                src={ element.strMealThumb }
+                alt={ element.strMeal }
+                className="img-card"
+                data-testid={ `${index}-card-img` }
+              />
+              <h3 data-testid={ `${index}-card-name` }>{element.strMeal}</h3>
+            </div>
+          </Link>
         ))
       }
       <Footer />

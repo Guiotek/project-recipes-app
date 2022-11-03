@@ -23,6 +23,7 @@ class FoodFilters extends Component {
         <button
           data-testid={ `${name}-category-filter` }
           type="button"
+          className="btn-filter"
           onClick={ () => this.renderReceitas(name) }
         >
           { name }

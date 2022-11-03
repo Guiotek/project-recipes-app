@@ -20,6 +20,7 @@ function ButtonShare() {
       <button
         data-testid="share-btn"
         type="button"
+        className="search-header"
         onClick={ handleClick }
       >
         <img src={ shareIcon } alt="shareIcon" />

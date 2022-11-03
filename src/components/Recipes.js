@@ -110,7 +110,7 @@ class Recipes extends Component {
     const { show } = this.props;
 
     return (
-      <div>
+      <div className="div-recipes">
 
         <h2>Filters</h2>
         { !loading && (show ? filteredMeal : filteredDrinks).map(({ strCategory }) => (
@@ -124,6 +124,7 @@ class Recipes extends Component {
         <button
           type="button"
           data-testid="All-category-filter"
+          className="btn-recipes"
           onClick={ () => (show ? this.mealsFtch() : this.drinkFtch()) }
         >
           All

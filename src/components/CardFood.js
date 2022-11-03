@@ -10,9 +10,14 @@ class CardFood extends Component {
       name,
       index } = this.props;
     return (
-      <Link to={ link }>
-        <div data-testid={ `${index}-recipe-card` }>
-          <img data-testid={ `${index}-card-img` } src={ src } alt={ name } />
+      <Link to={ link } className="link">
+        <div data-testid={ `${index}-recipe-card` } className="div-card">
+          <img
+            data-testid={ `${index}-card-img` }
+            src={ src }
+            alt={ name }
+            className="img-card"
+          />
           <h5 data-testid={ `${index}-card-name` }>{ name }</h5>
         </div>
       </Link>

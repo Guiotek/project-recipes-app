@@ -56,7 +56,6 @@ export default function SearchBar() {
             value="search-first-letter"
             id="search-radio-f"
             name="search-radio"
-            className="search-radio"
             onClick={ () => setRadioInput('first') }
           />
           {' '}

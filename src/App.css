@@ -170,19 +170,7 @@ form fieldset {
   width: 360px;
 }
 
-#search-radio-i {
-  height: 17px;
-  margin-top: 5px;
-  width: 17px;
-}
-
-#search-radio-f {
-  height: 17px;
-  margin-top: 5px;
-  width: 17px;
-}
-
-#search-radio-n {
+.search-radio {
   height: 17px;
   margin-top: 5px;
   width: 17px;

@@ -32,6 +32,7 @@ export default function SearchBar() {
             id="search-radio-i"
             value="search-ingredient"
             name="search-radio"
+            className="search-radio"
             onClick={ () => setRadioInput('ingredient') }
           />
           {' '}
@@ -44,6 +45,7 @@ export default function SearchBar() {
             value="search-name"
             id="search-radio-n"
             name="search-radio"
+            className="search-radio"
             onClick={ () => setRadioInput('name') }
           />
           {' '}
@@ -56,6 +58,7 @@ export default function SearchBar() {
             value="search-first-letter"
             id="search-radio-f"
             name="search-radio"
+            className="search-radio"
             onClick={ () => setRadioInput('first') }
           />
           {' '}

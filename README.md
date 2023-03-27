@@ -36,6 +36,9 @@ npm install
 npm start
 ```
 
+## 🔍 Observação
+<strong>Dimensões</strong>: 360 x 640
+
 ## :handshake: Colaboradores
 <table>
   <tr>

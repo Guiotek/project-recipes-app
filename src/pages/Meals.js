@@ -19,7 +19,7 @@ export default function Comidas() {
   const foodTrue = true;
 
   return (
-    <div>
+    <div className="height-divs">
       <Header />
       <title>Meals</title>
       {

@@ -1,0 +1,102 @@
+.login-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-container p {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.login-container form {
+  height: 230px;
+  width: 650px;
+}
+
+.login-container form p {
+  width: 80%;
+}
+
+.input-login {
+  border: 2px solid black;
+  margin-bottom: 5px;
+}
+
+.btn-login {
+  border-radius: 5px;
+  color: white;
+  height: 32px;
+  margin-bottom: 30px;
+  width: 70px;
+}
+
+.btn-login:disabled {
+  background-color: rgb(0, 98, 209);
+  border: 2px solid rgb(0, 98, 209);
+}
+
+.btn-login:enabled {
+  background-color: green;
+  border: 2px solid green;
+}
+
+@media screen and ( max-width : 1086px ) {
+
+  .login-container form {
+    width: 60%;
+  }
+
+  .login-container form p {
+    width: 80%;
+  }
+}
+
+@media screen and ( max-width : 858px ) {
+
+  .login-container form {
+    width: 60%;
+  }
+
+  .login-container form p {
+    width: 90%;
+  }
+}
+
+@media screen and ( max-width : 600px ) {
+
+  .login-container form {
+    width: 60%;
+  }
+
+  .login-container form p {
+    width: 90%;
+  }
+}
+
+@media screen and ( max-width : 507px ) {
+
+  .login-container form {
+    width: 80%;
+  }
+
+  .login-container form p {
+    width: 80%;
+  }
+}
+
+@media screen and ( max-width : 452px ) {
+
+  .login-container form {
+    width: 90%;
+  }
+}
+
+@media screen and ( max-width : 360px ) {
+
+  .login-container form {
+    width: 100%;
+  }
+}

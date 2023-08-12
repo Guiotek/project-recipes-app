@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
 import MyContext from '../context/MyContext';
+import '../styles/Login.css';
 
 function Login() {
   const {
@@ -74,6 +75,11 @@ function Login() {
           >
             Enter
           </button>
+          <p>
+            Caso não tenha login digite um
+            email valida e uma senha com no
+            minimo 7 digítos para se registrar.
+          </p>
         </fieldset>
       </form>
     </div>

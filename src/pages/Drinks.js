@@ -19,7 +19,7 @@ function Drinks() {
   const foodTrue = false;
 
   return (
-    <div>
+    <div className="height-divs">
       <Header />
       {
         showRecipes

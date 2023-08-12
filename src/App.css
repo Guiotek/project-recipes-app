@@ -19,6 +19,10 @@
   max-height: 80vh;
 }
 
+.height-divs {
+  height: 457vh;
+}
+
 /*
 #iceLeft {
   animation: clink .8s infinite ease;
@@ -39,13 +43,6 @@
   font-family: Montserrat , sans-serif;
   font-size: 3em;
   font-weight: 900;
-}
-
-.login-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 img {
@@ -94,14 +91,6 @@ form fieldset {
   justify-content: center;
 }
 
-.btn-login {
-  background-color: rgb(0, 98, 209);
-  border-radius: 5px;
-  color: white;
-  height: 32px;
-  width: 70px;
-}
-
 .btn-recipes {
   background-color: rgb(0, 98, 209);
   border-radius: 5px;
@@ -124,11 +113,6 @@ form fieldset {
   display: flex;
   flex-flow: column;
   justify-content: center;
-}
-
-.input-login {
-  border: 2px solid gray;
-  margin-bottom: 5px;
 }
 
 .img-card {

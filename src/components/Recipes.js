@@ -111,8 +111,6 @@ class Recipes extends Component {
 
     return (
       <div className="div-recipes">
-
-        <h2>Filters</h2>
         { !loading && (show ? filteredMeal : filteredDrinks).map(({ strCategory }) => (
           <FoodFilters
             name={ strCategory }
@@ -127,10 +125,12 @@ class Recipes extends Component {
           className="btn-recipes"
           onClick={ () => (show ? this.mealsFtch() : this.drinkFtch()) }
         >
-          All
+          <h2>
+            All
+          </h2>
         </button>
 
-        <h2>Recipes</h2>
+        <h1 className='recipesTitle'>Recipes</h1>
         { !loading && (show && (
           meals.map(({ strMealThumb, strMeal, idMeal }, i) => (<CardFood
             name={ strMeal }

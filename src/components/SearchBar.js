@@ -14,7 +14,7 @@ export default function SearchBar() {
   };
 
   return (
-    <div>
+    <div className='searchBox'>
       <input
         type="text"
         data-testid="search-input"
@@ -36,7 +36,7 @@ export default function SearchBar() {
             onClick={ () => setRadioInput('ingredient') }
           />
           {' '}
-          Ingredient
+          <p className='whiteColor'>Ingredient</p>
         </label>
         <label htmlFor="search-radio-n">
           <input
@@ -49,7 +49,9 @@ export default function SearchBar() {
             onClick={ () => setRadioInput('name') }
           />
           {' '}
+          <p className='whiteColor'>
           Name
+          </p>
         </label>
         <label htmlFor="search-radio-f">
           <input
@@ -62,7 +64,9 @@ export default function SearchBar() {
             onClick={ () => setRadioInput('first') }
           />
           {' '}
+          <p className='whiteColor'>
           First Letter
+          </p>
         </label>
       </span>
       <br />

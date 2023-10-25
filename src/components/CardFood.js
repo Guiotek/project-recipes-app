@@ -18,7 +18,7 @@ class CardFood extends Component {
             alt={ name }
             className="img-card"
           />
-          <h5 data-testid={ `${index}-card-name` }>{ name }</h5>
+          <h1 data-testid={ `${index}-card-name` } className="name-food">{ name }</h1>
         </div>
       </Link>
     );

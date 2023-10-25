@@ -3,4 +3,14 @@
   bottom: 0;
   position: fixed;
   text-align: center;
+  width: 70%;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: white;
 }

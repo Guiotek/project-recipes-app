@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 export default function YoutubeEmbed({ url }) {
   const getIdFromUrl = (url.split('='))[1];
   return (
-    <div>
+    <div className='YBV'>
       <iframe
         title="Youtube"
-        width="350"
-        height="220"
+        width="500"
+        height="300"
         src={ `https://www.youtube.com/embed/${getIdFromUrl}` }
         frameBorder="0"
         allow="accelerometerautoplay;

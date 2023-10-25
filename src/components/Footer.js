@@ -7,20 +7,22 @@ import '../styles/Footer.css';
 export default function Footer() {
   return (
     <footer data-testid="footer">
-      <Link to="/meals">
-        <img
-          data-testid="meals-bottom-btn"
-          alt="Ícone botão de refeições"
-          src={ mealIcon }
-        />
-      </Link>
-      <Link to="/drinks">
-        <img
-          data-testid="drinks-bottom-btn"
-          alt="Ícone botão de refeições"
-          src={ drinkIcon }
-        />
-      </Link>
+      <div className='footerIcon'>
+        <Link to="/meals">
+          <img
+            data-testid="meals-bottom-btn"
+            alt="Ícone botão de refeições"
+            src={ mealIcon }
+          />
+        </Link>
+        <Link to="/drinks">
+          <img
+            data-testid="drinks-bottom-btn"
+            alt="Ícone botão de refeições"
+            src={ drinkIcon }
+          />
+        </Link>
+      </div>
     </footer>
   );
 }

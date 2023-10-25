@@ -10,34 +10,36 @@ function Header() {
 
   return (
     <div className="header-container">
-      <Link to="/profile" className="link-header">
-        <img
-          src={ profileIcon }
-          alt="Profile"
-          className="img-link-header"
-          data-testid="profile-top-btn"
-        />
-      </Link>
-      {
-        hideSearch
-        && (
-          <button
-            type="button"
-            data-testid="search-btn"
-            className="search-header"
-            onClick={ () => setSearchBar(!searchBar) }
-          >
-            <img
-              src={ searchIcon }
-              alt="Profile"
-              data-testid="search-top-btn"
-            />
-          </button>
-        )
-      }
-      {
-        searchBar && (<SearchBar />)
-      }
+      <div id='home'>
+        {
+          hideSearch
+          && (
+            <button
+              type="button"
+              data-testid="search-btn"
+              className="search-header"
+              onClick={ () => setSearchBar(!searchBar) }
+            >
+              <img
+                src={ searchIcon }
+                alt="Profile"
+                data-testid="search-top-btn"
+              />
+            </button>
+          )
+        }
+        <Link to="/profile" className="link-header">
+          <img
+            src={ profileIcon }
+            alt="Profile"
+            className="img-link-header"
+            data-testid="profile-top-btn"
+          />
+        </Link>
+      </div>
+        {
+          searchBar && (<SearchBar />)
+        }
       <br />
       <h1 data-testid="page-title">{headerTitle}</h1>
     </div>

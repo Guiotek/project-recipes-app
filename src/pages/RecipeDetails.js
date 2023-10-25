@@ -142,16 +142,17 @@ export default function RecipeDetails(props) {
           <p data-testid="instructions">{ recipeDetail[0].strInstructions }</p>
           { mealOrDrink === 'meals'
             && (
-              <div data-testid="video">
+              <div data-testid="video" className="YB">
                 <YoutubeEmbed url={ recipeDetail[0].strYoutube } />
               </div>
             ) }
-          <div>
+          <div className="recommendations">
             <Recommendations typeAPI={ drinkAPI || mealAPI } />
           </div>
           <div className="div-buttons">
             <ButtonShare />
             <FavoriteButton />
+          </div>
             {
               recipeStatus !== 'done'
             && (
@@ -161,11 +162,10 @@ export default function RecipeDetails(props) {
                 className="startButton"
                 onClick={ sendToInProgress }
               >
-                { recipeStatus === 'new' ? 'Start Recipe' : 'Continue Recipe' }
+                { recipeStatus === 'new' ? <h3>Start Recipe</h3> : <h3>Continue Recipe</h3> }
               </button>
             )
             }
-          </div>
         </div>
       ) }
     </div>

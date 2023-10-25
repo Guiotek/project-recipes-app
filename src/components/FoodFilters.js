@@ -19,16 +19,16 @@ class FoodFilters extends Component {
   render() {
     const { name } = this.props;
     return (
-      <div>
-        <button
-          data-testid={ `${name}-category-filter` }
-          type="button"
-          className="btn-filter"
-          onClick={ () => this.renderReceitas(name) }
-        >
+      <button
+        data-testid={ `${name}-category-filter` }
+        type="button"
+        className="btn-filter"
+        onClick={ () => this.renderReceitas(name) }
+      >
+        <h2>
           { name }
-        </button>
-      </div>
+        </h2>
+      </button>
     );
   }
 }

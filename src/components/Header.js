@@ -10,7 +10,7 @@ function Header() {
 
   return (
     <div className="header-container">
-      <div id='home'>
+      <div id="home">
         {
           hideSearch
           && (
@@ -37,9 +37,9 @@ function Header() {
           />
         </Link>
       </div>
-        {
-          searchBar && (<SearchBar />)
-        }
+      {
+        searchBar && (<SearchBar />)
+      }
       <br />
       <h1 data-testid="page-title">{headerTitle}</h1>
     </div>

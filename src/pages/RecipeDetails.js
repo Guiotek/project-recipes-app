@@ -153,8 +153,8 @@ export default function RecipeDetails(props) {
             <ButtonShare />
             <FavoriteButton />
           </div>
-            {
-              recipeStatus !== 'done'
+          {
+            recipeStatus !== 'done'
             && (
               <button
                 data-testid="start-recipe-btn"
@@ -162,10 +162,11 @@ export default function RecipeDetails(props) {
                 className="startButton"
                 onClick={ sendToInProgress }
               >
-                { recipeStatus === 'new' ? <h3>Start Recipe</h3> : <h3>Continue Recipe</h3> }
+                {recipeStatus === 'new' ? <h3>Start Recipe</h3>
+                  : <h3>Continue Recipe</h3>}
               </button>
             )
-            }
+          }
         </div>
       ) }
     </div>

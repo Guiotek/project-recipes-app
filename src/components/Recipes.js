@@ -130,7 +130,7 @@ class Recipes extends Component {
           </h2>
         </button>
 
-        <h1 className='recipesTitle'>Recipes</h1>
+        <h1 className="recipesTitle">Recipes</h1>
         { !loading && (show && (
           meals.map(({ strMealThumb, strMeal, idMeal }, i) => (<CardFood
             name={ strMeal }

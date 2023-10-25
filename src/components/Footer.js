@@ -7,7 +7,7 @@ import '../styles/Footer.css';
 export default function Footer() {
   return (
     <footer data-testid="footer">
-      <div className='footerIcon'>
+      <div className="footerIcon">
         <Link to="/meals">
           <img
             data-testid="meals-bottom-btn"

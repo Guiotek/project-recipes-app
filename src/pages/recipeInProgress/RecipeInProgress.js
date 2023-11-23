@@ -93,7 +93,7 @@ export default function RecipeInProgress(props) {
         !loading && (
 
           <div className="in-progess-container">
-            <p>{ inProgress[0].idMeal || inProgress[0].idDrink }</p>
+            {/* <p>{ inProgress[0].idMeal || inProgress[0].idDrink }</p> */}
             <img
               data-testid="recipe-photo"
               className="img-card img-inProgress"

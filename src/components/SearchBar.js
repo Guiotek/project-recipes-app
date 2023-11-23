@@ -76,7 +76,7 @@ export default function SearchBar() {
         className="btn-filter"
         onClick={ handleClick }
       >
-        Busca
+        Search
       </button>
     </div>
   );

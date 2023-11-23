@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import MyContext from '../context/MyContext';
-import profileIcon from '../images/profileIcon.svg';
-import searchIcon from '../images/searchIcon.svg';
+import profileIcon from '../images/ProfileIcon.png';
+import searchIcon from '../images/SearchIcon.png';
 import SearchBar from './SearchBar';
 
 function Header() {
@@ -23,6 +23,7 @@ function Header() {
               <img
                 src={ searchIcon }
                 alt="Profile"
+                className="img-link-header"
                 data-testid="search-top-btn"
               />
             </button>
@@ -40,8 +41,9 @@ function Header() {
       {
         searchBar && (<SearchBar />)
       }
-      <br />
-      <h1 data-testid="page-title">{headerTitle}</h1>
+      <div className='title-div'>
+        <h1 data-testid="page-title" className='titleHome'>{headerTitle}</h1>
+      </div>
     </div>
   );
 }

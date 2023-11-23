@@ -1,5 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkatra&display=swap');
+
 html {
   width: 100% ;
+}
+
+body {
+  font-family: 'Alkatra', cursive;
+}
+
+.height-divs {
+  background-image: url(./images/pisoMadeira.png);
+  background-position: center;
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .strikethrough:has( .check-ingredient:checked ) {
@@ -8,11 +25,10 @@ html {
 
 .meals {
   align-items: center;
-  background: #0fa36b;
   color: #c3eec1;
   display: flex;
   flex-direction: column;
-  font-family: sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   height: 100vh;
   justify-content: flex-start;
   width: 100%;
@@ -45,7 +61,7 @@ html {
 .meals > .logo {
   animation: shake 1.5s infinite ease;
   color: aliceblue;
-  font-family: Montserrat , sans-serif;
+  font-family: 'Alkatra' , sans-serif;
   font-size: 3em;
   font-weight: 900;
 }
@@ -97,8 +113,8 @@ form fieldset {
 }
 
 .btn-recipes {
-  background-color: rgb(0, 131, 65);
-  border: 2px solid black;
+  background-color: #806f6a;
+  border: none;
   border-radius: 50px;
   color: white;
   height: 70px;
@@ -107,15 +123,25 @@ form fieldset {
   margin-bottom: 50px;
 }
 
+.btn-recipes:hover {
+  transform: scale(1.2);
+  transition: all 125ms ease-in;
+}
+
 .btn-filter {
-  background-color: rgb(0, 131, 65);
-  border: 2px solid black;
+  background-color: #806f6a;
   border-radius: 50px;
-  color: white;
+  border: none;
+  color: whitesmoke;
   margin-bottom: 5px;
   width: 60%;
   height: 70px;
   margin: 5px;
+}
+
+.btn-filter:hover {
+  transform: scale(1.2);
+  transition: all 125ms ease-in;
 }
 
 .div-recipes {
@@ -123,6 +149,18 @@ form fieldset {
   display: flex;
   flex-flow: column;
   justify-content: center;
+  color: black;
+  padding-top: 50px;
+  border-radius: 100px;
+  background-color: #00000065;
+  background-image: url(./images/pisoMadeira.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  position: relative;
+  padding-top: 100px;
+  bottom: 100px;
+  border: 0.5px solid black;
 }
 
 .img-card {
@@ -136,11 +174,10 @@ form fieldset {
 }
 
 .search-header {
-  border: 2px solid black;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
   border-radius: 30px;
   padding: 10px;
-  width: 55px;
-  margin-right: 15px;
   margin-left: 15px;
 }
 
@@ -158,13 +195,22 @@ form fieldset {
   width: 100%;
 }
 
+.div-card:hover .img-card{
+  border: 2px solid green;
+}
+
 .header-container {
   align-items: center;
+  color: black;
   display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  margin-bottom: 30px;
-  background-color: #0fa36b;
+  flex-flow: column nowrap;
+  background-image: url(./images/imgBack2.webp);
+  background-position: ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 100%;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.411);
 }
 
 #home {
@@ -172,12 +218,38 @@ form fieldset {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
+}
+
+.title-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  align-self: center;
+  flex-flow: column nowrap;
+}
+
+.titleHome {
+  display: flex;
+  align-items: center;
+  font-size: 200px;
+  color: #ff7875;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.384);
 }
 
 .searchBar {
   margin-top: 5px;
   width: 360px;
+  height: 50px;
+  border-radius: 30px;
 }
 
 .searchBox {
@@ -187,6 +259,8 @@ form fieldset {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background-color: rgba(0, 0, 0, 0.384);
+  width: 100%;
 }
 
 .search-radio {
@@ -203,18 +277,15 @@ form fieldset {
 }
 
 .link-header {
-  border: 2px solid black;
-  border-radius: 20px;
+  border: none;
+  border-radius: 50px;
   display: flex;
   justify-content: center;
   margin-bottom: 15px;
-  width: 80px;
   margin-top: 10px;
-  background-color: white;
 }
 
 .recipesTitle {
-  background-color: #0fa36b;
   display: flex;
   height: 100px;
   width: 100%;
@@ -223,6 +294,8 @@ form fieldset {
   align-content: center;
   justify-content: center;
   align-items: center;
+  font-size: 50px;
+  color: #ff7875;
 }
 
 .div-buttons {
@@ -236,7 +309,12 @@ form fieldset {
 }
 
 .img-link-header {
-  width: 45%;
+  width: 50px;
+  height: 50px;
+  margin-right: 50px;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: rgba(0, 0, 0, 0.37);
 }
 
 .img-inProgress {

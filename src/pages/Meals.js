@@ -21,7 +21,6 @@ export default function Comidas() {
   return (
     <div className="height-divs">
       <Header />
-      <title>Meals</title>
       {
         showRecipes
         && <Recipes show={ foodTrue } />

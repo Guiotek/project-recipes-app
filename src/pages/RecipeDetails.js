@@ -48,6 +48,8 @@ export default function RecipeDetails(props) {
     let result = '';
     if (pathname.includes('meals')) {
       const getDrinkAPI = await fetchAPI('thecocktaildb', 'filter', 'a', 'Alcoholic');
+      const getMealAPI = await fetchAPI('themealdb', 'search', 's', '');
+      setMealAPI(getMealAPI.meals);
       console.log(await getDrinkAPI.drinks);
       setRecipeType('meal');
       setDrinkAPI(getDrinkAPI.drinks);
@@ -58,7 +60,8 @@ export default function RecipeDetails(props) {
       setMeasures(objectEntries(result, 'strMeasure'));
     } else {
       const getMealAPI = await fetchAPI('themealdb', 'search', 's', '');
-      console.log(await getMealAPI);
+      const getDrinkAPI = await fetchAPI('thecocktaildb', 'filter', 'a', 'Alcoholic');
+      setDrinkAPI(getDrinkAPI.drinks);
       setRecipeType('drink');
       setMealAPI(getMealAPI.meals);
       setMealOrDrink('drinks');
@@ -148,7 +151,7 @@ export default function RecipeDetails(props) {
               </div>
             ) }
           <div className="recommendations">
-            <Recommendations typeAPI={ mealAPI || drinkAPI } />
+            <Recommendations typeAPI={ drinkAPI || mealAPI } />
           </div>
           <div className="div-buttons">
             <ButtonShare />

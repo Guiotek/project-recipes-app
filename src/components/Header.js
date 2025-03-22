@@ -41,8 +41,8 @@ function Header() {
       {
         searchBar && (<SearchBar />)
       }
-      <div className='title-div'>
-        <h1 data-testid="page-title" className='titleHome'>{headerTitle}</h1>
+      <div className="title-div">
+        <h1 data-testid="page-title" className="titleHome">{headerTitle}</h1>
       </div>
     </div>
   );

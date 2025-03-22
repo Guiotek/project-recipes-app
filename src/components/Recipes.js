@@ -6,7 +6,7 @@ import FoodFilters from './FoodFilters';
 // erste tag
 const endPt1 = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 const endPt2 = 'https://www.themealdb.com/api/json/v1/1/list.php?c=list';
-const endPt3 = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+const endPt3 = 'https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic';
 const endPt4 = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list';
 
 class Recipes extends Component {
@@ -50,7 +50,6 @@ class Recipes extends Component {
     const cockTailsLength = 11;
     const require = await fetch(endPt3);
     const { drinks } = await require.json();
-
     if (drinks === undefined) {
       this.setState({ loading: true });
     } else {
@@ -67,8 +66,10 @@ class Recipes extends Component {
     const require = await fetch(endPt4);
     const { drinks } = await require.json();
 
-    if (drinks === undefined) {
+    if (drinks === undefined || drinks === null) {
       this.setState({ loading: true });
+    } else if (drinks === 'no data found') {
+      return none;
     } else {
       const filteredDrink = drinks
         .filter((meal, i) => i <= filteredDrinkLength);

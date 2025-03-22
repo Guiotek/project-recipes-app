@@ -21,7 +21,7 @@ function Provider({ children }) {
   const [measures, setMeasures] = useState([]);
   const [ingredientsDrink, setIngredientsDrink] = useState([]);
   const [showRecipes, setShowRecipes] = useState(true);
-  const [mealAPI, setMealAPI] = useState();
+  const [mealAPI, setMealAPI] = useState([]);
   const [drinkAPI, setDrinkAPI] = useState();
   const [recipeStatus, setRecipeStatus] = useState([]);
   const [inProgress, setInProgress] = useState([]);
